@@ -47,7 +47,8 @@
         }
         /* tira a decoração padrao de link, fonte tamanho 18 e cor preta */
         footer {
-            position: fixed;
+            margin: 0px;
+            position: relative;
             bottom: 0;
             width: 100%;
             background-color: black; 
@@ -61,22 +62,24 @@
 
         }
         /* logo da coca branca, alinhada ao centro horizontalmente e verticalmente, com espaçamento de 50px pra ficar visualmente mais bonito */
-        hr {
-            margin: 30px;
+        footer hr {
+            display: flex;
+            justify-content: center;
             width: 90%;
             height:0.5; 
             background-color:white;
         }
         /* margin para distanciar dos outros componentes, width para ocupar 90% da linha horizontal da pagina , grossura no 0.5 e cor branca*/
         .icones {
-            padding: 30px;
+            padding: 50px;
             display: flex;
             justify-content: center;
         }
-        /* icones com espaçamentos de 30px e centralizados horizontalmente */
+        /* icones com espaçamentos de 50px e centralizados horizontalmente */
         .footerlinks {
+            margin-left: 5%;
             display: flex;
-            justify-content: center; 
+            justify-content: space-around; 
             gap: 30px; 
         }
         /* Centraliza os elementos horizontalmente e Espaçamento entre os links com o gap*/
@@ -96,7 +99,83 @@
             color: white;
         }
         /* espaçamente de 50px, tamanho da fonte com 25px e cor branca */
+        .novo01{
+            display: flex;
+        }
+        h3{
+            font-size: 24px;
+        }
+        p{
+            font-weight: 100;
+        }
+        .novo01,.novo02,.exp01, .exp02, h3, p{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .novo01 img, .novo02 img, .exp01 img, .exp02 img{
+            width: 50%;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3%;
+        }
+        hr{
+            margin-top: 5%;
+            margin-bottom: 5%;
+            width: 90%;
+            height:3px; 
+            border-radius: 30%;
+            background-color:black;
+        }
+        h2{
+            display: flex;
+            justify-content: center;
+        }
+        .slideshow {
+            position: relative;
+            width: 150%;
+            max-width: 900px;
+            margin: auto;
+            margin-top: 5%;
+            overflow: hidden;
+        }
 
+        .slideshow img {
+            border-radius: 3%;
+            width: 100%;
+            display: none;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        #slide1:checked ~ .slideshow img:nth-of-type(1),
+        #slide2:checked ~ .slideshow img:nth-of-type(2),
+        #slide3:checked ~ .slideshow img:nth-of-type(3) {
+            display: block;
+        }
+
+        .navigation {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .navigation label {
+            cursor: pointer;
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: gray;
+            margin: 5px;
+        }
+
+        #slide1:checked ~ .navigation label[for="slide1"],
+        #slide2:checked ~ .navigation label[for="slide2"],
+        #slide3:checked ~ .navigation label[for="slide3"] {
+            background: blue;
+        }
     </style>
 </head>
 <body>
@@ -118,6 +197,49 @@
             
         </div>
     </nav>
+    <main>
+        <input type="radio" name="slides" id="slide1" checked>
+        <input type="radio" name="slides" id="slide2">
+        <input type="radio" name="slides" id="slide3">
+
+        <div class="slideshow">
+            <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/coke-studio-24/rock-in-rio/hero_rir.jpg/width1960.jpg" alt="Imagem03">
+            <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/vai-de-retornavel/hero_nuevo.jpg/width1960.jpg" alt="Imagem02">
+            <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/coke-studio-24/lolla-25/jao-exclusive/jao-banner-desktop.jpg/width1960.jpg" alt="imagem03">
+        </div>
+
+        <div class="navigation">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+        </div>
+        </div>
+        <hr>
+        <h2>O QUE HÁ DE NOVO:</h2>
+        <div class="novo01">
+            <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/brands/sprite/sprite_lemon.jpg/width1960.jpg" alt="novidade01">
+        </div>
+            <h3>Sprite lemon Fresh deixa tudo bem mais leve</h3>
+            <p>Descubra a leveza</p>
+        <div class="novo02">
+            <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/sustainability/retornaveis/nuevas/card-desktop.jpg/width1960.jpg" alt="novidade02">
+        </div>
+            <h3>Só retornavel</h3>
+            <p>Mais sabor para suas refeições pagando apenas pelo liquido</p>
+            <hr>
+        <h2>Experiências</h2>
+        <div class="exp01">
+            <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/campaign-cards/coke_studio_card.jpg/width1960.jpg" alt="Experiência01">
+        </div>
+        <h3>Coke Studio</h3>
+        <p>Experimente a magia da música</p>
+        <div class="exp02">
+            <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/sprite-summer/content_card_1_fpo.jpg/width1960.jpg" alt="Experiência01">
+        </div>
+        <h3>Refresque-se com sprite</h3>
+        <p>Em casa ou na rua, o calor pode ser sufocante</p>
+        <br>
+    </main>
     <footer>
         <figure class="LogoFinal">
             <img src="https://www.coca-cola.com/content/dam/onexp/global/icons/logo-white-large.svg" alt="logococa">
