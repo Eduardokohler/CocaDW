@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sustentabilidade</title>
-     <style>
-        body{
+    <style>
+        body {
             margin: 0;
             padding: 0%;
             font-family: Noto-regional, Noto-latin, TCCC-UnityText, sans-serif;
             font-weight: 700;
             background-color: #eeeeee;
-            
+
         }
+
         /* margem e padding zeradas, todos os textos tem as mesma fonte, fonte-weight é responsavel por deixar letras mais grossas, fundo cinza claro */
         nav {
             background-color: white;
@@ -23,17 +24,20 @@
             align-items: center;
             justify-content: space-between;
         }
+
         /* nav com fundo branco, padding pra baixo e pra cima, centralizado verticalmente e space-between para separar igualmente  */
         .LogoInicio {
             margin: 10px;
         }
+
         /* distanciar 10px da borda a imagem */
 
         .nav-container {
             display: flex;
-            justify-content:space-around;
+            justify-content: space-around;
             flex-grow: 1;
         }
+
         /* alinha os links das paginas  e flex grow é responsavel por ocupar todo o espaço disposivel*/
 
 
@@ -41,51 +45,58 @@
             text-decoration: none;
             font-size: 18px;
             color: black;
-            
+
         }
+
         /* tira a decoração padrao de link, fonte tamanho 18 e cor preta */
         footer {
             position: fixed;
             bottom: 0;
             width: 100%;
-            background-color: black; 
+            background-color: black;
         }
+
         /* footer posição fixa no fundo da pagina, cor de fundo preta, */
-        .LogoFinal{
-            display:flex ;
+        .LogoFinal {
+            display: flex;
             justify-content: center;
             align-items: center;
             padding: 50px;
 
         }
+
         /* logo da coca branca, alinhada ao centro horizontalmente e verticalmente, com espaçamento de 50px pra ficar visualmente mais bonito */
         hr {
             margin: 30px;
             width: 90%;
-            height:0.5; 
-            background-color:white;
+            height: 0.5;
+            background-color: white;
         }
+
         /* margin para distanciar dos outros componentes, width para ocupar 90% da linha horizontal da pagina , grossura no 0.5 e cor branca*/
         .icones {
             padding: 30px;
             display: flex;
             justify-content: center;
         }
+
         /* icones com espaçamentos de 30px e centralizados horizontalmente */
         .footerlinks {
             display: flex;
-            justify-content: center; 
-            gap: 30px; 
+            justify-content: center;
+            gap: 30px;
         }
+
         /* Centraliza os elementos horizontalmente e Espaçamento entre os links com o gap*/
 
 
         .footerlinks a {
-            padding: 30px; 
+            padding: 30px;
             text-decoration: none;
             color: white;
             font-size: 20px;
         }
+
         /* espaçamento de 30px, sem decoração no texto, cor do texto branco e fonte com 20px */
 
         .icones i {
@@ -93,72 +104,88 @@
             font-size: 25px;
             color: white;
         }
+
         /* espaçamente de 50px, tamanho da fonte com 25px e cor branca */
 
+        .texto {
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            /* flex-direction deixa os elementos alinhados na vertical */
+        }
+
+        .titulo {
+            font-size: 40px;
+            font-weight: 700;
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        .container-icones {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px 20px;
+            background-color: #f1f1f1;
+            /* cor de fundo opcional */
+        }
+
+        .icones img {
+            width: 100%;
+            max-width: 350px;
+            border-bottom: 50px solid #ffffff;
+            border-radius: 12px;
+        }
     </style>
 </head>
-
-<body>
-     <nav>
-        <figure class="LogoInicio">
-            <img src="https://www.coca-cola.com/content/dam/onexp/global/icons/Coke-company-logo-black.svg" alt="logococa">
-        </figure>
-        <div class="nav-container">
+<nav>
+    <figure class="LogoInicio">
+        <img src="https://www.coca-cola.com/content/dam/onexp/global/icons/Coke-company-logo-black.svg" alt="logococa">
+    </figure>
+    <div class="nav-container">
         <!-- loga da coca com cor preta -->
-            
-                
+
+
         <a href="index.html">Home</a>
-               
+
         <a href="Marcas.html">Marcas</a>
-            
+
         <a href="Sustentabilidade.html">Sustentabilidade</a>
 
         <!-- links para as paginas -->
-            
-        </div>
-    </nav>
+
+    </div>
+</nav>
+
+<body>
     <div>
         <figure>
-            <img src="Assets/Image/IMG.1-sustentabilidade.webp" alt="Imagem 1">
+            <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/sustainability/new-sustainability/coca_banner-desktop_1440x8101.jpg/width1960.jpg"
+                alt="Imagem 1">
         </figure>
     </div>
-    <h1>SUSTENTABILIDADE</h1>
-    <p>Como uma companhia total de bebidas, somos guiados pelo nosso propósito de refrescar o mundo e fazer a diferença.
-        Nosso objetivo é expandir nosso negócio de maneira que impulsione mudanças positivas e contribua para um futuro
-        mais sustentável para o nosso planeta.</p>
-    <div>
+    <section class="texto">
+        <h1 class="titulo">SUSTENTABILIDADE</h1>
+        <div>
+            <p>Como uma companhia total de bebidas, somos guiados pelo nosso propósito de refrescar o mundo e fazer a
+                diferença.
+                Nosso objetivo é expandir nosso negócio de maneira que impulsione mudanças positivas e contribua para um
+                futuro
+                mais sustentável para o nosso planeta.</p>
+        </div>
+    </section>
+    <div class="container-icones">
         <figure>
-            <img src="Assets/Image/IMG.agua.webp" alt="Imagem agua">
-            <img src="Assets/Image/IMG.embalagens.webp" alt="Imagem embalagens">
-            <img src="Assets/Image/IMG.emissoes.webp" alt="Imagem emissoes">
+            <div class="icones">
+                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/sustainability/actualizacion-dec-2024/banner_agua.png/width1960.png"
+                    alt="Imagem agua">
+                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/sustainability/actualizacion-dec-2024/banner_embalagens.png/width1960.png"
+                    alt="Imagem embalagens">
+                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/sustainability/actualizacion-dec-2024/banner_emissoes.png/width1960.png"
+                    alt="Imagem emissoes">
+            </div>
         </figure>
     </div>
-<footer>
-        <figure class="LogoFinal">
-            <img src="https://www.coca-cola.com/content/dam/onexp/global/icons/logo-white-large.svg" alt="logococa">
-        </figure>
-        <!-- logo da coca branca -->
-        <hr>
-        <div class="footerlinks">
-            <a href="index.html">Home</a>
-            <a href="Marcas.html">Marcas</a>
-            <a href="Sustentabilidade.html">Sustentabilidade</a> 
-            <!-- links para as paginas disponiveis -->
-        </div>
-        <hr>
-        <div class="icones">
-            <a href="https://www.facebook.com">
-                <i class="bi bi-facebook"></i>
-            </a>
-            <a href="https://www.youtube.com">
-                <i class="bi bi-youtube"></i>
-            </a>
-            <a href="https://www.instagram.com">
-                <i class="bi bi-instagram"></i>
-            </a>
-            <!-- icones com os respectivos links -->
-        </div>
-    </footer>
+
 </body>
 
 </html>
