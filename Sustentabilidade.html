@@ -135,6 +135,60 @@
             border-bottom: 50px solid #ffffff;
             border-radius: 12px;
         }
+
+         footer {
+            margin: 0px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            background-color: black; 
+        }
+        /* footer posição fixa no fundo da pagina, cor de fundo preta, */
+        .LogoFinal{
+            display:flex ;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+
+        }
+        /* logo da coca branca, alinhada ao centro horizontalmente e verticalmente, com espaçamento de 50px pra ficar visualmente mais bonito */
+        footer hr {
+            display: flex;
+            justify-content: center;
+            width: 90%;
+            height:0.5; 
+            background-color:white;
+        }
+        /* margin para distanciar dos outros componentes, width para ocupar 90% da linha horizontal da pagina , grossura no 0.5 e cor branca*/
+        .icones {
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+        }
+        /* icones com espaçamentos de 50px e centralizados horizontalmente */
+        .footerlinks {
+            margin-left: 5%;
+            display: flex;
+            justify-content: space-around; 
+            gap: 30px; 
+        }
+        /* Centraliza os elementos horizontalmente e Espaçamento entre os links com o gap*/
+
+
+        .footerlinks a {
+            padding: 30px; 
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+        /* espaçamento de 30px, sem decoração no texto, cor do texto branco e fonte com 20px */
+
+        .icones i {
+            padding: 50px;
+            font-size: 25px;
+            color: white;
+        }
+        /* espaçamente de 50px, tamanho da fonte com 25px e cor branca */
     </style>
 </head>
 <nav>
@@ -185,7 +239,32 @@
             </div>
         </figure>
     </div>
-
+    <footer>
+        <figure class="LogoFinal">
+            <img src="https://www.coca-cola.com/content/dam/onexp/global/icons/logo-white-large.svg" alt="logococa">
+        </figure>
+        <!-- logo da coca branca -->
+        <hr>
+        <div class="footerlinks">
+            <a href="index.html">Home</a>
+            <a href="Marcas.html">Marcas</a>
+            <a href="Sustentabilidade.html">Sustentabilidade</a>
+            <!-- links para as paginas disponiveis -->
+        </div>
+        <hr>
+        <div class="icones">
+            <a href="https://www.facebook.com">
+                <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://www.youtube.com">
+                <i class="bi bi-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com">
+                <i class="bi bi-instagram"></i>
+            </a>
+            <!-- icones com os respectivos links -->
+        </div>
+    </footer>
 </body>
 
 </html>
