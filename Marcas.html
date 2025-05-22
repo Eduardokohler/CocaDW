@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marcas</title>
     <style>
-        body {
+       body {
             margin: 0;
             padding: 0%;
             font-family: Noto-regional, Noto-latin, TCCC-UnityText, sans-serif;
             font-weight: 700;
             background-color: #eeeeee;
-
         }
 
         /* margem e padding zeradas, todos os textos tem as mesma fonte, fonte-weight é responsavel por deixar letras mais grossas, fundo cinza claro */
@@ -47,56 +46,51 @@
             color: black;
 
         }
-
         /* tira a decoração padrao de link, fonte tamanho 18 e cor preta */
         footer {
-            position: fixed;
+            margin: 0px;
+            position: relative;
             bottom: 0;
             width: 100%;
-            background-color: black;
+            background-color: black; 
         }
-
         /* footer posição fixa no fundo da pagina, cor de fundo preta, */
-        .LogoFinal {
-            display: flex;
+        .LogoFinal{
+            display:flex ;
             justify-content: center;
             align-items: center;
             padding: 50px;
-
         }
-
         /* logo da coca branca, alinhada ao centro horizontalmente e verticalmente, com espaçamento de 50px pra ficar visualmente mais bonito */
-        hr {
-            margin: 30px;
+        footer hr {
+            display: flex;
+            justify-content: center;
             width: 90%;
-            height: 0.5;
-            background-color: white;
+            height:0.5; 
+            background-color:white;
         }
-
         /* margin para distanciar dos outros componentes, width para ocupar 90% da linha horizontal da pagina , grossura no 0.5 e cor branca*/
         .icones {
-            padding: 30px;
+            padding: 50px;
             display: flex;
             justify-content: center;
         }
-
-        /* icones com espaçamentos de 30px e centralizados horizontalmente */
+        /* icones com espaçamentos de 50px e centralizados horizontalmente */
         .footerlinks {
+            margin-left: 5%;
             display: flex;
-            justify-content: center;
-            gap: 30px;
+            justify-content: space-around; 
+            gap: 30px; 
         }
-
         /* Centraliza os elementos horizontalmente e Espaçamento entre os links com o gap*/
 
 
         .footerlinks a {
-            padding: 30px;
+            padding: 30px; 
             text-decoration: none;
             color: white;
             font-size: 20px;
         }
-
         /* espaçamento de 30px, sem decoração no texto, cor do texto branco e fonte com 20px */
 
         .icones i {
@@ -104,7 +98,6 @@
             font-size: 25px;
             color: white;
         }
-
         /* espaçamente de 50px, tamanho da fonte com 25px e cor branca */
 
         h1 {
@@ -121,10 +114,8 @@
             width: 100px;
             line-height: 2;
             /* espaçamento entre as linhas */
-            transform: scale (1,4;)
+            transform: scale (1,4)
             /* centraliza horizontalmente */
-            display: flex;
-            padding: 60px 90px 90px 90px;
             /* espaçamento interno */
         }
 
@@ -142,7 +133,6 @@
         }
     </style>
 </head>
-
 <body>
     <nav>
         <figure class="LogoInicio">
@@ -203,6 +193,34 @@
             </figure>
         </div>    
     </section>
+    <div>
+            <footer>
+        <figure class="LogoFinal">
+            <img src="https://www.coca-cola.com/content/dam/onexp/global/icons/logo-white-large.svg" alt="logococa">
+        </figure>
+        <!-- logo da coca branca -->
+        <hr>
+        <div class="footerlinks">
+            <a href="index.html">Home</a>
+            <a href="Marcas.html">Marcas</a>
+            <a href="Sustentabilidade.html">Sustentabilidade</a> 
+            <!-- links para as paginas disponiveis -->
+        </div>
+        <hr>
+        <div class="icones">
+            <a href="https://www.facebook.com">
+                <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://www.youtube.com">
+                <i class="bi bi-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com">
+                <i class="bi bi-instagram"></i>
+            </a>
+            <!-- icones com os respectivos links -->
+        </div>
+    </footer>
+    </div>
 </body>
 
 </html>
