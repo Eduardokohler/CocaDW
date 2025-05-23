@@ -8,182 +8,277 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coca-Cola</title>
     <style>
-        body{
-            margin: 0;
-            padding: 0%;
-            font-family: Noto-regional, Noto-latin, TCCC-UnityText, sans-serif;
-            font-weight: 700;
-            background-color: #eeeeee;
-            
-        }
-        /* margem e padding zeradas, todos os textos tem as mesma fonte, fonte-weight é responsavel por deixar letras mais grossas, fundo cinza claro */
-        nav {
-            background-color: white;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        /* nav com fundo branco, padding pra baixo e pra cima, centralizado verticalmente e space-between para separar igualmente  */
-        .LogoInicio {
-            margin: 10px;
-        }
-        /* distanciar 10px da borda a imagem */
-
-        .nav-container {
-            display: flex;
-            justify-content:space-around;
-            flex-grow: 1;
-        }
-        /* alinha os links das paginas  e flex grow é responsavel por ocupar todo o espaço disposivel*/
-
-
-        .nav-container a {
-            text-decoration: none;
-            font-size: 18px;
-            color: black;
-            
-        }
-        /* tira a decoração padrao de link, fonte tamanho 18 e cor preta */
-        footer {
-            margin: 0px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            background-color: black; 
-        }
-        /* footer posição fixa no fundo da pagina, cor de fundo preta, */
-        .LogoFinal{
-            display:flex ;
-            justify-content: center;
-            align-items: center;
-            padding: 50px;
-
-        }
-        /* logo da coca branca, alinhada ao centro horizontalmente e verticalmente, com espaçamento de 50px pra ficar visualmente mais bonito */
-        footer hr {
-            display: flex;
-            justify-content: center;
-            width: 90%;
-            height:0.5; 
-            background-color:white;
-        }
-        /* margin para distanciar dos outros componentes, width para ocupar 90% da linha horizontal da pagina , grossura no 0.5 e cor branca*/
-        .icones {
-            padding: 50px;
-            display: flex;
-            justify-content: center;
-        }
-        /* icones com espaçamentos de 50px e centralizados horizontalmente */
-        .footerlinks {
-            margin-left: 5%;
-            display: flex;
-            justify-content: space-around; 
-            gap: 30px; 
-        }
-        /* Centraliza os elementos horizontalmente e Espaçamento entre os links com o gap*/
-
-
-        .footerlinks a {
-            padding: 30px; 
-            text-decoration: none;
-            color: white;
-            font-size: 20px;
-        }
-        /* espaçamento de 30px, sem decoração no texto, cor do texto branco e fonte com 20px */
-
-        .icones i {
-            padding: 50px;
-            font-size: 25px;
-            color: white;
-        }
-        /* espaçamente de 50px, tamanho da fonte com 25px e cor branca */
-        h3{
-            font-size: 24px;
-        }
-        /* todo h3 tem o tamanho de 24px */
-        p{
-            font-weight: 100;
-        }
-        /* todo paragrafo fica com a letra mais fina */
-        .novo01,.novo02,.exp01, .exp02, h3, p, h2{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        /* alinha todos os elementos */
         
-        .novo01 img, .novo02 img, .exp01 img, .exp02 img{
-            width: 50%;
-            border-radius: 3%;
-        }
-        /* define largura em 50% e arredonda borda */
-        hr{
-            margin-top: 5%;
-            margin-bottom: 5%;
-            width: 90%;
-            height:3px; 
-            border-radius: 30%;
-            background-color:black;
-        }
-        /*a linha tem margin-top e margin-bottom para ficar distante dos elementos de cima e de baixo,
-         ocupa a linha horizontal da tela em 90%, tem a expessura em 3px, arredonda bordar e define a cor pra preto */
 
-        .slideshow {
-            position: relative;
-            max-width: 900px;
-            margin: auto;
-            margin-top: 5%;
-        }
-        /* relative indica que os elementos dentro dele podem ser posicionados de forma relativa a ele, no caso as 3 imagens, 
-        limitamos a largura para 900px, margin auto fica centralizado, margin top fica distante do nav */
-        .slideshow img {
-            border-radius: 3%;
-            width: 100%;
-            display: none;
-        }
-        /* adicionamos um border radius para arrendondar as imagens, largura total do container e display
-         none para que todas as imagens fiquem ocultas e apenas a desejada fique visiveil */
-
-        input[type="radio"] {
-            display: none;
-        }
-        /* os seletores padrão do radio são ocultados porém são responsaveis por alterar as imagens */
-
-        #slide1:checked ~ .slideshow img:nth-of-type(1),
-        #slide2:checked ~ .slideshow img:nth-of-type(2),
-        #slide3:checked ~ .slideshow img:nth-of-type(3) {
-            display: block;
-        }
-        /* quando algum input é selecionado ele é responsavel por alterar o display pra block fazendo com que a imagem apareça */
-
-        .navigation {
-            text-align: center;
-            margin-top: 10px;
-        }
-        /* Responsavel por centralizar novos botões e distanciar 10px do carrosel */
-
-        .navigation label {
-            cursor: pointer;
-            display: inline-block;
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            background: gray;
-            margin: 5px;
-        }
-        /* pointer responsavel por alterar o cursor para mão, inline-block garante que elas estaram na mesma linha
-        width e height é o tamanho das labels, border radius deixa as labels em forma de circulo, background é a cor da label
-        margin 5px para manter distante de outros elementos */
+/*
 
 
-        #slide1:checked ~ .navigation label[for="slide1"],
-        #slide2:checked ~ .navigation label[for="slide2"],
-        #slide3:checked ~ .navigation label[for="slide3"] {
-            background: blue;
-        }
-        /* se o radio button estiver marcado muda a cor para azul */
+
+
+
+
+
+                    ────────────────
+                    >>>>  CSS PRINCIPAL  <<<<
+                    ────────────────
+
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+					/* BODY */
+
+
+
+
+					body {
+						margin: 0;
+						padding: 0%;
+						font-family: Noto-regional, Noto-latin, TCCC-UnityText, sans-serif;
+						font-weight: 700;
+						background-color: #eeeeee;
+					}
+					/* margem e padding zeradas, todos os textos tem as mesma fonte, fonte-weight é responsavel por deixar letras mais grossas, fundo cinza claro */
+
+
+
+
+
+
+
+
+
+
+					/* NAV */
+
+
+
+
+					nav {
+						background-color: white;
+						padding-top: 20px;
+						padding-bottom: 20px;
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+					}
+					/* nav com fundo branco, padding pra baixo e pra cima, centralizado verticalmente e space-between para separar igualmente  */
+
+					.LogoInicio {
+						margin: 10px;
+					}
+					/* distanciar 10px da borda a imagem */
+
+					.nav-container {
+						display: flex;
+						justify-content: space-around;
+						flex-grow: 1;
+					}
+					/* alinha os links das paginas  e flex grow é responsavel por ocupar todo o espaço disposivel*/
+
+					.nav-container a {
+						text-decoration: none;
+						font-size: 18px;
+						color: black;
+					}
+					/* tira a decoração padrao de link, fonte tamanho 18 e cor preta */
+
+
+
+
+
+
+
+
+
+
+					/* FOOTER */
+
+
+
+
+					footer {
+						margin: 0px;
+						position: relative;
+						bottom: 0;
+						width: 100%;
+						background-color: black;
+					}
+					/* footer posição fixa no fundo da pagina, cor de fundo preta, */
+
+					.LogoFinal {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						padding: 50px;
+					}
+					/* logo da coca branca, alinhada ao centro horizontalmente e verticalmente, com espaçamento de 50px pra ficar visualmente mais bonito */
+
+					footer hr {
+						display: flex;
+						justify-content: center;
+						width: 90%;
+						height: 0.5;
+						background-color: white;
+					}
+					/* margin para distanciar dos outros componentes, width para ocupar 90% da linha horizontal da pagina , grossura no 0.5 e cor branca */
+
+					.icones {
+						padding: 50px;
+						display: flex;
+						justify-content: center;
+					}
+					/* icones com espaçamentos de 50px e centralizados horizontalmente */
+
+					.footerlinks {
+						margin-left: 5%;
+						display: flex;
+						justify-content: space-around;
+						gap: 30px;
+					}
+					/* Centraliza os elementos horizontalmente e Espaçamento entre os links com o gap*/
+
+					.footerlinks a {
+						padding: 30px;
+						text-decoration: none;
+						color: white;
+						font-size: 20px;
+					}
+					/* espaçamento de 30px, sem decoração no texto, cor do texto branco e fonte com 20px */
+
+					.icones i {
+						padding: 50px;
+						font-size: 25px;
+						color: white;
+					}
+					/* espaçamente de 50px, tamanho da fonte com 25px e cor branca */
+
+
+     
+					/* TEXTOS CENTRAIS */
+
+
+
+
+					h3 {
+						font-size: 24px;
+					}
+					/* todo h3 tem o tamanho de 24px */
+
+					p {
+						font-weight: 100;
+					}
+					/* todo paragrafo fica com a letra mais fina */
+
+					.novo01, .novo02, .exp01, .exp02, h3, p, h2 {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+					/* alinha todos os elementos */
+
+
+
+
+
+
+
+
+
+
+					/* IMAGENS */
+
+
+
+
+					.novo01 img, .novo02 img, .exp01 img, .exp02 img {
+						width: 50%;
+						border-radius: 3%;
+					}
+					/* define largura em 50% e arredonda borda */
+
+
+
+
+
+
+
+
+
+					/* SLIDESHOW */
+
+
+
+
+                    
+					.slideshow {
+						position: relative;
+						max-width: 900px;
+						margin: auto;
+						margin-top: 5%;
+					}
+					/* relative indica que os elementos dentro dele podem ser posicionados de forma relativa a ele, no caso as 3 imagens, 
+					limitamos a largura para 900px, margin auto fica centralizado, margin top fica distante do nav */
+
+					.slideshow img {
+						border-radius: 3%;
+						width: 100%;
+						display: none;
+					}
+					/* adicionamos um border radius para arrendondar as imagens, largura total do container e display
+					none para que todas as imagens fiquem ocultas e apenas a desejada fique visível */
+
+					input[type="radio"] {
+						display: none;
+					}
+					/* os seletores padrão do radio são ocultados porém são responsaveis por alterar as imagens */
+
+					#slide1:checked ~ .slideshow img:nth-of-type(1),
+					#slide2:checked ~ .slideshow img:nth-of-type(2),
+					#slide3:checked ~ .slideshow img:nth-of-type(3) {
+						display: block;
+					}
+					/* quando algum input é selecionado ele é responsável por alterar o display pra block fazendo com que a imagem apareça */
+
+					.navigation {
+						text-align: center;
+						margin-top: 10px;
+					}
+					/* Responsável por centralizar novos botões e distanciar 10px do carrossel */
+
+					.navigation label {
+						cursor: pointer;
+						display: inline-block;
+						width: 15px;
+						height: 15px;
+						border-radius: 50%;
+						background: gray;
+						margin: 5px;
+					}
+					/* pointer responsável por alterar o cursor para mão, inline-block garante que elas estarão na mesma linha
+					width e height é o tamanho das labels, border radius deixa as labels em forma de círculo, background é a cor da label
+					margin 5px para manter distante de outros elementos */
+
+					#slide1:checked ~ .navigation label[for="slide1"],
+					#slide2:checked ~ .navigation label[for="slide2"],
+					#slide3:checked ~ .navigation label[for="slide3"] {
+						background: blue;
+					}
+					/* se o radio button estiver marcado muda a cor para azul */
+
     </style>
 </head>
 <body>
