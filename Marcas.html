@@ -2,11 +2,22 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marcas</title>
     <style>
+
+
+
+
+
+                                                /*BODY*/
+
+
+
+
+
         body {
             margin: 0;
             padding: 0%;
@@ -15,6 +26,18 @@
             background-color: #eeeeee;
 
         }
+
+
+
+
+
+
+                                                /*CABECALHO*/
+
+
+
+
+
 
         /* margem e padding zeradas, todos os textos tem as mesma fonte, fonte-weight é responsavel por deixar letras mais grossas, fundo cinza claro */
         nav {
@@ -48,83 +71,59 @@
             color: black;
 
         }
+        
 
 
-        /* logo da coca branca, alinhada ao centro horizontalmente e verticalmente, com espaçamento de 50px pra ficar visualmente mais bonito */
-        hr {
-            margin: 30px;
-            width: 90%;
-            height: 0.5;
-            background-color: white;
-        }
-        footer {
-            margin: 0px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            background-color: black; 
-        }
-        /* footer posição fixa no fundo da pagina, cor de fundo preta, */
-        .LogoFinal{
-            display:flex ;
-            justify-content: center;
-            align-items: center;
-            padding: 50px;
-
-        }
-        /* logo da coca branca, alinhada ao centro horizontalmente e verticalmente, com espaçamento de 50px 
-        pra ficar visualmente mais bonito */
-        footer hr {
-            display: flex;
-            justify-content: center;
-            width: 90%;
-            height:0.5; 
-            background-color:white;
-        }
-        /* margin para distanciar dos outros componentes, width para ocupar 90% da linha horizontal da pagina , 
-        grossura no 0.5 e cor branca*/
-        .icones {
-            padding: 50px;
-            display: flex;
-            justify-content: center;
-        }
-        /* icones com espaçamentos de 50px e centralizados horizontalmente */
-        .footerlinks {
-            margin-left: 5%;
-            display: flex;
-            justify-content: space-around; 
-            gap: 30px; 
-        }
-        /* Centraliza os elementos horizontalmente e Espaçamento entre os links com o gap*/
 
 
-        .footerlinks a {
-            padding: 30px; 
-            text-decoration: none;
-            color: white;
-            font-size: 20px;
-        }
-        /* espaçamento de 30px, sem decoração no texto, cor do texto branco e fonte com 20px */
 
-        .icones i {
-            padding: 50px;
-            font-size: 25px;
-            color: white;
-        }
-        /* espaçamente de 50px, tamanho da fonte com 25px e cor branca */
-
+                                                /*TÍTULO*/    
         h1 {
             text-align: center;
             font-size: 40px;
-            margin-top: 20px;
+            margin-top: 70px;
             color: black;
         }
 
         /* centraliza o texto, tamanho da fonte 40px, margem pra cima de 20px e cor preta */
 
+        
+
+
+
+                                                /* MARCAS */
+
+
+
+
+
+        .container-logos {
+            padding: 50px;
+        }
+
+        /* padding é responsavel por distancias nosso container de imagens dos demais elementos
+        fundo branco */
+        
+        .logomarca {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            justify-items: center;
+            align-items: center;
+            max-width: 900px;
+            /* Largura máxima para alinhar no centro */
+            margin: 0 auto;
+            /* Centraliza horizontalmente */
+        }
+
+        /* definimos o display em grid para dividir em colunas e linhas essas imagens 
+        grid-template-columns é responsavel por primeiramente dividir em coluna de 3 e logo em seguida configuramos para que
+        esses elementos ocupem uma fração total disponivel no caso fica 1/3 de 900px para cada imagem (horizontal).
+        o gap é reponsavel por separar 40px da imagens da coluna (vertical)
+        max-width é o tamanho da grade que no caso é 900px*/
 
         .logomarca img {
-            width: 200px; 
+            width: 200px;
             height: 200px;
             object-fit: contain;
             /* mantém proporção da imagem sem cortar */
@@ -135,37 +134,94 @@
             /* sombra leve */
             transition: transform 0.3s ease;
         }
+
         /* largura e altura definidas em 200px, object-fit previne que as imagens fiquem distorcidas pois algumas imagens tem 
         resoluções diferentes e isso pode gerar distorções, fundo branco, arredonda as bordas, box shadow coloca uma sombra atrás 
         do nosso elemento, animação definida para transitar em 0.3 segundos */
 
-        .container-logos {
-        padding: 50px;
-        }
-        /* padding é responsavel por distancias nosso container de imagens dos demais elementos
-        fundo branco */
-
-        .logomarca {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 40px;
-        justify-items: center;
-        align-items: center;
-        max-width: 900px;        /* Largura máxima para alinhar no centro */
-        margin: 0 auto;          /* Centraliza horizontalmente */
-        }
-        /* definimos o display em grid para dividir em colunas e linhas essas imagens 
-        grid-template-columns é responsavel por primeiramente dividir em coluna de 3 e logo em seguida configuramos para que
-        esses elementos ocupem uma fração total disponivel no caso fica 1/3 de 900px para cada imagem (horizontal).
-        o gap é reponsavel por separar 40px da imagens da coluna (vertical)
-        max-width é o tamanho da grade que no caso é 900px*/
-        
         .logomarca img:hover {
-        transform: scale(1.05);
+            transform: scale(1.05);
         }
+
         /* responsavel por aumentar em 0.5 a imagem ao passar o mouse por cima */
 
 
+
+
+
+                                                /*FOOTER*/
+
+
+
+
+
+        footer {
+            margin: 0px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            background-color: black;
+        }
+
+        /* footer posição fixa no fundo da pagina, cor de fundo preta, */
+        .LogoFinal {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+
+        }
+
+        /* logo da coca branca, alinhada ao centro horizontalmente e verticalmente, com espaçamento de 50px 
+        pra ficar visualmente mais bonito */
+        footer hr {
+            display: flex;
+            justify-content: center;
+            width: 90%;
+            height: 0.5;
+            background-color: white;
+        }
+
+        /* margin para distanciar dos outros componentes, width para ocupar 90% da linha horizontal da pagina , 
+        grossura no 0.5 e cor branca*/
+        .icones {
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* icones com espaçamentos de 50px e centralizados horizontalmente */
+        .footerlinks {
+            margin-left: 5%;
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+        }
+
+        /* Centraliza os elementos horizontalmente e Espaçamento entre os links com o gap*/
+
+
+        .footerlinks a {
+            padding: 30px;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+
+        /* espaçamento de 30px, sem decoração no texto, cor do texto branco e fonte com 20px */
+
+        .icones i {
+            padding: 50px;
+            font-size: 25px;
+            color: white;
+        }
+
+        /* espaçamente de 50px, tamanho da fonte com 25px e cor branca */
+
+
+
+
+        
     </style>
 </head>
 
@@ -193,60 +249,73 @@
     <section class="container-logos">
         <div class="logomarca">
             <a href="https://www.youtube.com/watch?v=2AJSPet2Dgs" target="_blank">
-                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/christmas/Coca-Cola-original-logo-co.svg" alt="Logo Coca Cola">
+                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/christmas/Coca-Cola-original-logo-co.svg"
+                    alt="Logo Coca Cola">
             </a>
 
             <a href="https://www.youtube.com/watch?v=4VO8zBcl6Ck" target="_blank">
-                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/brands/sprite/br_sprite_logo.png" alt="Logo Sprite">
+                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/brands/sprite/br_sprite_logo.png"
+                    alt="Logo Sprite">
             </a>
 
             <a href="https://www.youtube.com/watch?v=as93VoU2ZTY" target="_blank">
-                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/fanta-ccxp/fanta_logo.png" alt="Logo Fanta">
+                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/fanta-ccxp/fanta_logo.png"
+                    alt="Logo Fanta">
             </a>
 
             <a href="https://www.youtube.com/watch?v=fqY324r0wUU" target="_blank">
-                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/logos/Logo_Schweppes.png" alt="Logo Schweppes">
+                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/logos/Logo_Schweppes.png"
+                    alt="Logo Schweppes">
             </a>
 
             <a href="https://www.youtube.com/watch?v=_1BnThRFafE" target="_blank">
-                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/logos/crystal_logo_500x180.png" alt="Logo Crystal">
+                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/logos/crystal_logo_500x180.png"
+                    alt="Logo Crystal">
             </a>
 
             <a href="https://www.youtube.com/watch?v=H0G800M_UIU" target="_blank">
-                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/logos/guarana-kuat-logo.png" alt="Logo Guarana Kuat">
+                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/logos/guarana-kuat-logo.png"
+                    alt="Logo Guarana Kuat">
             </a>
 
             <a href="https://www.youtube.com/watch?v=eXkZpyRwX38" target="_blank">
-                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/brands/absolut/logoabsolustprite.jpg" alt="Logo Absolut Sprite">
+                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/brands/absolut/logoabsolustprite.jpg"
+                    alt="Logo Absolut Sprite">
             </a>
 
             <a href="https://www.youtube.com/watch?v=kYvvXjBVc_w" target="_blank">
-                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/brands/jack-daniels/Brazil_JandC_Logo_180x180.png" alt="Logo Brazil JandC">
+                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/brands/jack-daniels/Brazil_JandC_Logo_180x180.png"
+                    alt="Logo Brazil JandC">
             </a>
 
             <a href="https://www.youtube.com/watch?v=WvDRcZiIwaQ" target="_blank">
-                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/brands/del-valle/finals/es_Global%20delValle%20Logo%204C_180x180.png" alt="Logo Del Valle">
+                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/brands/del-valle/finals/es_Global%20delValle%20Logo%204C_180x180.png"
+                    alt="Logo Del Valle">
             </a>
 
             <a href="https://www.youtube.com/watch?v=nbkgVrbGQWA" target="_blank">
-                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/logos/es_ades_logo_180x180.png" alt="Logo Ades">
+                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/logos/es_ades_logo_180x180.png"
+                    alt="Logo Ades">
             </a>
 
             <a href="https://www.youtube.com/watch?v=Z-ddomkt8tw" target="_blank">
-                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/brands/produtos-leao/logo_chas_leao.jpg" alt="Logo Leão Chás">
+                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/brands/produtos-leao/logo_chas_leao.jpg"
+                    alt="Logo Leão Chás">
             </a>
 
             <a href="https://www.youtube.com/watch?v=mJhIiNU0h5Q" target="_blank">
-                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/logos/brazil_schweppes_logo_anuncio_197x180.png" alt="Logo Schweppes Premium Drinks">
+                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/logos/brazil_schweppes_logo_anuncio_197x180.png"
+                    alt="Logo Schweppes Premium Drinks">
             </a>
 
             <a href="https://www.youtube.com/watch?v=uB5IDyrVwi4" target="_blank">
-                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/brands/powerade/logo_pwd.png" alt="Logo Powerade">
+                <img src="https://www.coca-cola.com/content/dam/onexp/br/pt/brands/powerade/logo_pwd.png"
+                    alt="Logo Powerade">
             </a>
         </div>
     </section>
 
-        <footer>
+    <footer>
         <figure class="LogoFinal">
             <img src="https://www.coca-cola.com/content/dam/onexp/global/icons/logo-white-large.svg" alt="logococa">
         </figure>
@@ -255,7 +324,7 @@
         <div class="footerlinks">
             <a href="index.html">Home</a>
             <a href="Marcas.html">Marcas</a>
-            <a href="Sustentabilidade.html">Sustentabilidade</a> 
+            <a href="Sustentabilidade.html">Sustentabilidade</a>
             <!-- links para as paginas disponiveis -->
         </div>
         <hr>
@@ -272,7 +341,7 @@
             <!-- icones com os respectivos links -->
         </div>
     </footer>
-    
+
 </body>
 
 </html>
